@@ -1,0 +1,44 @@
+{
+    "elements": {},
+    "attributes": {
+        "th:text": {
+            "context": "input"
+        },
+        "th:object": {
+            "context": "form"
+        },
+        "media": {
+            "context": "main"
+        },
+        "th:fragment": {
+            "context": "header"
+        },
+        "th:field": {
+            "context": "input"
+        },
+        "th:method": {
+            "context": "form"
+        },
+        "th:each": {
+            "context": "tr"
+        },
+        "th:replace": {
+            "context": "div"
+        },
+        "th:switch": {
+            "context": "main"
+        },
+        "th:href": {
+            "context": "a"
+        },
+        "th:case": {
+            "context": "h2"
+        },
+        "value": {
+            "context": "span"
+        },
+        "th:value": {
+            "context": "input"
+        }
+    }
+}

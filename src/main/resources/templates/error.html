@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Erro</title>
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+    </head>
+    <body>
+        <section class="content-container white-box">
+            <h1 class="titulo">Ocorreu um erro!</h1>
+            <hr>
+            <div th:switch="${status}">
+                <h2 th:case="'500'">Não foi possível encontrar o produto (Id <span th:text="${param.id}"></span>).</h2>
+                <h2 th:case="'404'">Página não encontrada.</h2>
+                <h2 th:case="*">Falha desconhecida.</h2>
+                <dl>
+                    <dt>Relatório</dt>
+                    <dd><strong>Status: </strong><span th:text="${status}"></span></dd>
+                    <dd><strong>Path: </strong><span th:text="${path}"></span></dd>
+                    <dd><strong>Data: </strong><span th:text="${#dates.format(#dates.createNow(),'HH:mm dd/MM/YYYY')}"></span></dd>
+                </dl>
+            </div>
+        </section>
+        <aside class="form-container">
+            <div class="white-box">
+                <button class="botao" onclick="window.history.back();">Voltar</button>
+            </div>
+        </aside>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Resultado da Busca</title>
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+    </head>
+    <body>
+        <div th:replace="~{header :: header}"></div>
+        <main>
+            <section class="content-container white-box">
+                <h2 class="capitalize"><span th:text="${produto.titulo}"></span></h2>
+                <hr>
+                <dl>
+                    <dt><strong>Informações gerais</strong></dt>
+                    <dd><strong>Vendedor: </strong><span th:text="${produto.vendedor}"></span></dd>
+                    <dd><strong>Categoria do produto: </strong><span th:text="${produto.categoria}"></span></dd>
+                    
+                    <dd><strong>Preço da unidade: </strong>R$<span th:text="${produto.precoUnidade}"></span></dd>
+                    
+                    <dt><strong>Detalhes do produto</strong></dt>
+                    <dd><strong>Descrição: </strong><span th:text="${produto.descricao}"></span></dd>
+                    <dd><strong>Endereço de retirada: </strong><span th:text="${produto.enderecoRetirada}"></span></dd>
+                    <dd><strong>Quantidade em estoque: </strong><span th:text="${produto.quantidade}"></span></dd>
+                    <dd><strong>Código de lote: </strong><span th:text="${produto.lote}"></span></dd>
+
+                    <dt><strong>Outros dados</strong></dt>
+                    <dd><strong>ID: </strong><span th:text="${produto.id}"></span></dd>
+                    <dd><strong>Última atualização: </strong><span th:text="${#temporals.format(produto.dataRegistro, 'dd/MM/yyyy HH:mm')}"></span></dd>
+                </dl>
+                <hr>
+                <div class="grupo-botao">
+                    <a class="botao" th:href="@{/form-config-atualizar?id={id}(id=${produto.id})}">Atualizar informações</a>
+                    <form name="deletar" action="deletar-produto" th:method="DELETE">
+                        <input type="hidden" name="id" th:value="${produto.id}">
+                        <button type="submit" class="botao">Deletar produto</button>
+                    </form>
+                </div>
+            </section>
+            <aside class="form-container">
+                <div class="white-box">
+                    <button class="botao" onclick="window.history.back();">Voltar</button>
+                </div>
+            </aside>
+        </main>
+    <div th:replace="~{footer :: footer}"></div>
+</body>
+</html>

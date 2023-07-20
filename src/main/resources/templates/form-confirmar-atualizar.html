@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Atualizar</title>
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+    </head>
+    <body>
+        <div th:replace="~{header :: header}"></div>
+        <main>
+            <section class="form-container">
+                <fieldset class="fieldset w-70">
+                    <legend class="legenda">
+                        <h3>Editar Produto</h3>
+                    </legend>
+                    <form name="atualizar" action="confirmar-atualizar" th:method="PUT">
+                        <div class="form-cel">
+                            <label>ID: <span th:text="${produto.id}"></span></label>                        
+                            <input type="hidden" name="id" th:value="${produto.id}">
+                        </div>
+                        <hr class="w-100">
+                        
+                        <div class="form-cel w-100">
+                            <label for="titulo">Título:</label>
+                            <input type="text" name="titulo" id="titulo" th:value="${produto.titulo}">
+                        </div>
+                        
+                        <div class="form-cel">
+                            <label for="vendedor">Nome do Anunciante:</label>
+                            <input type="text" name="vendedor" id="vendedor" th:value="${produto.vendedor}" required>
+                        </div>
+                        
+                        <div class="form-cel">
+                            <label for="categoria">Categoria:</label>
+                            <input type="text" name="categoria" id="categoria" th:value="${produto.categoria}" required>
+                        </div>
+                        
+                        <div class="form-cel w-100">
+                            <label for="descricao">Descrição(Opcional):</label>
+                            <textarea rows="4" id="descricao" name="descricao" th:text="${produto.descricao}"></textarea>
+                        </div>
+                        
+                        <div class="form-cel w-100">
+                            <label for="enderecoRetirada">Endereço de retirada do produto:</label>
+                            <input type="text" name="enderecoRetirada" id="enderecoRetirada" th:value="${produto.enderecoRetirada}" required>
+                        </div>
+                        
+                        <div class="form-cel">
+                            <label for="precoUnidade">Preço unitário:</label>
+                            <input type="number" min="0.01" step="0.01" name="precoUnidade" id="precoUnidade" th:value="${produto.precoUnidade}" required> 
+                        </div>
+                        
+                        <div class="form-cel">
+                            <label for="quantidade">Quantidade:</label>
+                            <input type="number" step="1" name="quantidade" id="quantidade" th:value="${produto.quantidade}" required> 
+                        </div>
+                        
+                        <div class="form-cel">
+                            <label for="lote">Código de lote:</label>                        
+                            <input type="number" step="1" name="lote" id="lote" th:value="${produto.lote}" required>
+                        </div>
+                         
+                        <div class="form-cel">
+                            <button type="submit" class="botao" disabled>Salvar alterações</button>
+                        </div>
+                    </form>
+                </fieldset>
+            </section>
+            <aside class="form-container">
+                <div class="white-box">
+                    <button class="botao" onclick="window.history.back();">Voltar</button>
+                </div>
+            </aside>
+        </main>
+        <div th:replace="~{footer :: footer}"></div>
+        <script src="js/verificar-campo-vazio.js"></script>
+    </body>
+</html>

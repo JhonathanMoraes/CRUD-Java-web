@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Deletar</title>
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+    </head>
+    <body>
+        <div th:replace="~{header :: header}"></div>
+        <main>
+            <section class="form-container">
+                <fieldset class="fieldset">
+                    <legend class="legenda">
+                        <h3>Excluir Produto</h3>
+                    </legend>
+                    <p>Digite o ID do Produto que deseja deletar.</p>
+                    <form name="deletar" action="deletar-produto" th:method="DELETE">
+                        <div class="form-cel w-100">
+                            <label for="id">ID:</label>                       
+                            <input type="number" name="id" id="id" required>
+                        </div>                        
+                        <div class="form-cel">
+                            <button type="submit" class="botao" disabled>Deletar</button>
+                        </div>
+                    </form>
+                </fieldset>
+            </section>
+            <aside class="form-container">
+                <div class="white-box">
+                    <p>Esqueceu o ID? <a href="consultar-todos.html">Clique aqui</a> para consultar a lista!</p>
+                </div>
+            </aside>
+        </main>
+        <div th:replace="~{footer :: footer}"></div>
+        <script src="js/verificar-campo-vazio.js"></script>
+    </body>
+</html>
