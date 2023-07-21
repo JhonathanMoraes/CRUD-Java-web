@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package br.com.projetoweb.produto.controllers;
 
 import br.com.projetoweb.produto.entities.Produto;
@@ -33,7 +29,7 @@ public class ProdutoController {
         try {
             prod.setDataRegistro(LocalDateTime.now());
             prodRepository.save(prod);
-            return "redirect:/consultar-todos.html";
+            return "redirect:/index.html";
         } catch (Exception ex) {
             throw new Exception(ex.getMessage());
         }
@@ -45,7 +41,7 @@ public class ProdutoController {
         try {
             prodRepository.findById(id).get();
             prodRepository.deleteById(id);
-            return "redirect:/consultar-todos.html";
+            return "redirect:/index.html";
         } catch (Exception ex) {
             throw new Exception(ex.getMessage());
         }
@@ -69,7 +65,7 @@ public class ProdutoController {
         try {
             prod.setDataRegistro(LocalDateTime.now());
             prodRepository.save(prod);
-            return "redirect:/consultar-todos.html";
+            return "redirect:/index.html";
         } catch (Exception ex) {
             throw new Exception(ex.getMessage());
         }
@@ -87,13 +83,13 @@ public class ProdutoController {
         }
     }
 
-    @GetMapping(value = "/consultar-todos.html")
+    @GetMapping(value = {"/", "/index.html"})
     public String consultarTodos(Model model) throws Exception {
 
         try {
             List<Produto> prodLista = prodRepository.findAll();
             model.addAttribute("produto", prodLista);
-            return "consultar-todos";
+            return "index";
         } catch (Exception ex) {
             throw new Exception(ex.getMessage());
         }

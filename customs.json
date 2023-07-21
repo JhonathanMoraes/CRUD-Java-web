@@ -22,6 +22,12 @@
         "th:each": {
             "context": "tr"
         },
+        "th:if": {
+            "context": "table"
+        },
+        "th:unless": {
+            "context": "table"
+        },
         "th:replace": {
             "context": "div"
         },
