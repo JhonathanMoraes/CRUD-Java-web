@@ -58,8 +58,8 @@
                         </div>
                         
                         <div class="form-cel">
-                            <label for="lote">Código de lote:</label>                        
-                            <input type="number" step="1" name="lote" id="lote" th:value="${produto.lote}" required>
+                            <label for="lote">Número de lote/série:</label>                        
+                            <input type="text" name="lote" id="lote" th:value="${produto.lote}" maxlength="20" required>
                         </div>
                          
                         <div class="form-cel">

@@ -45,9 +45,10 @@ public class Produto {
     @Column(name = "quantidade", nullable = false)
     private int quantidade;
     
-    @Column(name = "lote", nullable = false)
-    private int lote;
+    @Column(name = "lote", length = 20, nullable = false)
+    private String lote;
 
+    
     public Long getId() {
         return id;
     }
@@ -120,11 +121,11 @@ public class Produto {
         this.quantidade = quantidade;
     }
 
-    public int getLote() {
+    public String getLote() {
         return lote;
     }
 
-    public void setLote(int lote) {
+    public void setLote(String lote) {
         this.lote = lote;
     }
 }
