@@ -18,17 +18,17 @@
                     <form name="cadastrar" action="cadastrar-produto" method="POST">
                         <div class="form-cel w-100">
                             <label for="titulo">Título:</label>
-                            <input type="text" id="titulo" name="titulo" required>
+                            <input type="text" id="titulo" name="titulo" autocomplete="off" required>
                         </div>
 
                         <div class="form-cel">
                             <label for="vendedor">Nome do Anunciante:</label>
-                            <input type="text" id="vendedor" name="vendedor" required>
+                            <input type="text" id="vendedor" name="vendedor"  autocomplete="off" required>
                         </div>
 
                         <div class="form-cel">
                             <label for="categoria">Categoria:</label>
-                            <input type="text" id="categoria" name="categoria" required>
+                            <input type="text" id="categoria" name="categoria" autocomplete="off" required>
                         </div>
 
                         <div class="form-cel w-100">
@@ -38,7 +38,7 @@
 
                         <div class="form-cel w-100">
                             <label for="enderecoRetirada">Endereço de retirada do produto:</label>
-                            <input type="text" id="enderecoRetirada" name="enderecoRetirada" required>
+                            <input type="text" id="enderecoRetirada" name="enderecoRetirada" autocomplete="off" required>
                         </div>
 
                         <div class="form-cel">
@@ -53,7 +53,7 @@
 
                         <div class="form-cel">
                             <label for="lote">Código de lote:</label>
-                            <input type="number" step="1" id="lote" name="lote" required> 
+                            <input type="number" inputmode="numeric" step="1" id="lote" name="lote" required> 
                         </div>
                         <div class="form-cel">
                             <button type="submit" class="botao" disabled>Cadastrar</button>
