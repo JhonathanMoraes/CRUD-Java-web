@@ -17,8 +17,18 @@
 </p>
 
 ## Funcionalidades
-* Cadastrar produto
-* Alterar item selecionado
-* Excluir produto
-* Pesquisar via ID
-* Listar produtos cadastrados
+* [Cadastrar produto](#cadastrar-produto)
+* [Atualizar produto selecionado](#atualizar-produto-selecionado)
+* [Excluir produto](#excluir-produto)
+* [Pesquisar via ID](#pesquisar-via-id)
+* [Listar produtos cadastrados](#listar-produtos-cadastrados)
+
+### Cadastrar produto
+
+### Atualizar produto selecionado
+
+### Excluir produto
+
+### Pesquisar via ID
+
+### Listar produtos cadastrados
