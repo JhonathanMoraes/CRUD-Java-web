@@ -24,11 +24,26 @@
 * [Listar produtos cadastrados](#listar-produtos-cadastrados)
 
 ### Cadastrar produto
+<h1>
+  <img src="./img-readme/cadastrar.gif">
+</h1>
 
 ### Atualizar produto selecionado
+<h1>
+  <img src="./img-readme/atualizar.gif">
+</h1>
 
 ### Excluir produto
+<h1>
+  <img src="./img-readme/deletar.gif">
+</h1>
 
 ### Pesquisar via ID
+<h1>
+  <img src="./img-readme/buscar.gif">
+</h1>
 
 ### Listar produtos cadastrados
+<h1>
+  <img src="./img-readme/index-tabela.gif">
+</h1>
