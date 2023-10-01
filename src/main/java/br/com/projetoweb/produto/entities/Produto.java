@@ -9,10 +9,6 @@ import jakarta.persistence.Table;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-/**
- *
- * @author jhona
- */
 @Entity
 @Table(name = "produto")
 public class Produto {
